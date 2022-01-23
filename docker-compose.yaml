@@ -1,0 +1,8 @@
+version: "3" # composeファイルのバージョン
+services: 
+    app:
+        build: .
+        tty: true # ②コンテナの永続化
+        volumes:
+            - ./html:/var/www/html # ③マウントディレクトリ
+        container_name: golang_project
